@@ -3,23 +3,7 @@
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
 }
-.App-nav {
-    margin: 20px;
-    padding: 10px;
-    border-bottom: 2px solid #7C4DFF;
-}
-.App-nav ul {
-    padding: 0;
-    margin: 0;
-}
-.App-nav-item {
-    color: #303F9F;
-    list-style: none;
-    display: inline-block;
-    margin-right: 32px;
-    font-size: 24px;
-    border-bottom: 4px solid transparent;
-}
+
 .App-content {
     margin: 0 20px;
 }
