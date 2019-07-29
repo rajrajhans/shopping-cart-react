@@ -45,6 +45,35 @@
     vertical-align: top;
 }
 
+.addToCart {
+    margin-left: 66%;
+    padding: 10px;
+    background: #C5CAE9;
+    color: #303F9F;
+    font-size: 14px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border: 1px solid #303F9F;
+    border-radius: 15px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.addToCart:hover {
+    background: #303F9F;
+    color: #C5CAE9;
+    border: 1px solid #303F9F;
+}
+
+.addToCart:active {
+    background: #C5CAE9;
+    color: #303F9F;
+    border: 1px solid #303F9F;
+}
+
 .ItemPrice {
     display: inline-block;
     position: absolute;
@@ -79,5 +108,15 @@
     .ItemDes{
         margin-top: 70px;
         max-width: 20rem;
+    }
+
+    .ItemPrice{
+        margin-top: 35%;
+        text-align: center;
+    }
+
+    .addToCart{
+        margin-top: 40%;
+        text-align: center;
     }
 }

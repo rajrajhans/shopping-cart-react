@@ -10,10 +10,12 @@ class App extends React.Component{
         super(props);
 
         this.state={
-            activeTab: 0
+            activeTab: 0,
+            cart : []
         };
 
-        this.handleTabChange = this.handleTabChange.bind(this)
+        this.handleTabChange = this.handleTabChange.bind(this);
+        this.onAddToCart = this.onAddToCart.bind(this);
     }
 
     handleTabChange = (i) => {
@@ -23,10 +25,14 @@ class App extends React.Component{
         )
     };
 
+    onAddToCart(){
+        alert("Added")
+    }
+
     renderContent(){
             switch(this.state.activeTab){
                 default:
-                case 0: return <ItemPage items={testItems}/>;
+                case 0: return <ItemPage items={testItems} onAddToCart = {this.onAddToCart}/>;
                 case 1: return <span> cart wala content</span>;
             }
     }

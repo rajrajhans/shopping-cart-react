@@ -11,7 +11,7 @@ class ItemPage extends React.Component{
         return(
             <div className={"ItemsContainer"}>
                 {this.props.items.map(item => (
-                    <Item key = {item.id} item ={item} />
+                    <Item key = {item.id} item ={item} onAddToCart = {this.props.onAddToCart} />
                 ))}
             </div>
         )
@@ -24,7 +24,7 @@ class Item extends React.Component{
         super(props)
     }
 
-    render() {
+    render(){
         return(
             <div className={"ItemContainer"}>
                 <div className={"ItemImage"}>
@@ -42,6 +42,10 @@ class Item extends React.Component{
                 <span className={"ItemDes"}>
                     {this.props.item.description}
                 </span>
+
+                <button className={"addToCart"} onClick={this.props.onAddToCart}>
+                    Add To Cart
+                </button>
 
             </div>
         )
