@@ -2,6 +2,7 @@ import React from 'react'
 import Nav from './Nav'
 import './App.css'
 import ItemPage from './ItemPage'
+import CartPage from './CartPage'
 import testItems from './data'
 
 class App extends React.Component{
@@ -25,7 +26,10 @@ class App extends React.Component{
         )
     };
 
-    onAddToCart(){
+    onAddToCart(item){
+        this.setState({
+            cart : [...this.state.cart, item]
+        });
         alert("Added")
     }
 
@@ -33,7 +37,7 @@ class App extends React.Component{
             switch(this.state.activeTab){
                 default:
                 case 0: return <ItemPage items={testItems} onAddToCart = {this.onAddToCart}/>;
-                case 1: return <span> cart wala content</span>;
+                case 1: return <CartPage CartItems={this.state.cart}/>;
             }
     }
 

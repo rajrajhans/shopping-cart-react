@@ -11,7 +11,7 @@ class ItemPage extends React.Component{
         return(
             <div className={"ItemsContainer"}>
                 {this.props.items.map(item => (
-                    <Item key = {item.id} item ={item} onAddToCart = {this.props.onAddToCart} />
+                    <Item key = {item.id} item ={item} onAddToCart = {() => this.props.onAddToCart(item)} />
                 ))}
             </div>
         )
