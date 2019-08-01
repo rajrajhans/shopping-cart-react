@@ -16,6 +16,10 @@ class ItemPage extends React.Component{
             </div>
         )
     }
+
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        return false;
+    }
 }
 
 class Item extends React.Component{

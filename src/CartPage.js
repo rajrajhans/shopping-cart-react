@@ -9,15 +9,14 @@ class CartPage extends ItemPage{
     }
 
     countItems(cart){
+        /* Returns an pbject named cartIdCount which contains the ID of rach item added to the cart along with number of times an item was added in the cart */
         let cartIds = [];
-        let netCount = 0;
         let cartIdCount = {};
         for (let i = 0; i < cart.length; i++){
             if (cart[i].id in cartIds){
                 cartIdCount[cart[i].id] += 1;
             }
             else{
-                netCount += 1;
                 cartIds.push(cart[i].id);
                 cartIdCount[cart[i].id] = 1;
             }
@@ -28,13 +27,51 @@ class CartPage extends ItemPage{
         return cartIdCount;
     }
 
+    netCart = (cart) =>{
+        /*Returns a array which contains the items added to the cart only once, even if they are added more than once and occur more than once in "cart"*/
+        let cartIds = [];
+        let netCart = [];
+
+        for (let i=0; i < cart.length; i++){
+            if(cart[i].id in cartIds){
+                continue
+            }
+            else{
+                cartIds.push(cart[i].id);
+                netCart.push(cart[i]);
+            }
+        }
+        return(netCart)
+    };
+
     render(){
-            return(
-                //<ItemPage items={this.props.CartItems} />
-                <div>
-                    <p>{this.countItems(this.props.CartItems)['1']}</p>
-                </div>
-                )
+        let cartIdCounts = this.countItems(this.props.CartItems);
+        let netCart = this.netCart(this.props.CartItems);
+
+        return(
+            //<ItemPage items={this.props.CartItems} />
+            <div>
+                {netCart.map((item) => (
+                    <CartItem item={item} count={cartIdCounts[item.id]}/>
+                ))}
+            </div>
+            )
+    }
+}
+
+class CartItem extends React.Component{
+    // eslint-disable-next-line no-useless-constructor
+    constructor(props){
+        super(props);
+    }
+
+    render(){
+        return(
+            <div>
+                <p>{this.props.item.name} - {this.props.count}</p>
+                <p> </p>
+            </div>
+        )
     }
 }
 
