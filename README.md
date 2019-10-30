@@ -1,21 +1,18 @@
 # Shopping Cart using React
 
-This is a basic React Component to display a tweet. It is intended as a beginner project in learning ReactJS. To know more about the development process and what I learned in this project, please see this supplementary [blog post](https://rajrajhans.com/react-tweet-component/)
+This is a basic shopping cart which takes in a sample data in JSON format, displays it and enables the user to add items to the cart. To know more about the development process and what I learned in this project, please see this supplementary [blog post](https://rajrajhans.com/shopping-cart-with-react/)
 
-Here is an example of the component displaying a tweet -
+Here are some screenshots -
 
-![screenshot](Image.png)
+![screenshot](Image1.png)
+![screenshot](Image2.png)
+![screenshot](Image3.png)
 
 
 
 ## Blog Post 
 
-To know more about this project, please read the blog post accompanying it - [Getting up and running with ReactJS](https://rajrajhans.com/react-tweet-component/).  
-
-## Enhancement
-The component shows only one tweet. We can use array.map() to display a list of tweets. This is implemented in the using-array.map branch. 
-
-![](three.png)  
+To know more about this project, please read the blog post accompanying it - [Building a basic Shopping Cart with React](https://rajrajhans.com/shopping-cart-with-react/).  
 
 ## Running the project
 
