@@ -67,10 +67,24 @@ class CartItem extends React.Component{
 
     render(){
         return(
-            <div>
-                <p>{this.props.item.name} - {this.props.count}</p>
-                <p> </p>
+            <div className={"ItemContainer"}>
+                <div className={"ItemImage"}>
+                    <img src={this.props.item.image}  alt={"product"} width={120}/>
+                </div>
+
+                <span className={"ItemName"}>
+                    {this.props.item.name}
+                </span>
+
+                <span className={"ItemPrice"}>
+                    {this.props.count}
+                </span>
+
+                <span className={"ItemDes"}>
+                    {this.props.item.description}
+                </span>
             </div>
+
         )
     }
 }
