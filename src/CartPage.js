@@ -77,7 +77,7 @@ class CartItem extends React.Component{
                 </span>
 
                 <span className={"ItemPrice"}>
-                    {this.props.count}
+                    {this.props.count} x ₹ {this.props.item.price}
                 </span>
 
                 <span className={"ItemDes"}>
