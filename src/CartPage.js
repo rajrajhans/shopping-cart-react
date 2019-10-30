@@ -52,7 +52,7 @@ class CartPage extends ItemPage{
             //<ItemPage items={this.props.CartItems} />
             <div>
                 {netCart.map((item) => (
-                    <CartItem item={item} count={cartIdCounts[item.id]}/>
+                    <CartItem key={item.id} item={item} count={cartIdCounts[item.id]}/>
                 ))}
             </div>
             )

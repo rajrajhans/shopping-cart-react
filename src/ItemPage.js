@@ -54,6 +54,10 @@ class Item extends React.Component{
             </div>
         )
     }
+
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        return false;
+    }
 }
 
 export default ItemPage;
